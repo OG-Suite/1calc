@@ -7,13 +7,13 @@ module.exports = {
   },
   exclude: ['**/node_modules/**'],
   plugins: [
-    '@snowpack/plugin-react-refresh',
-    [
-      '@snowpack/plugin-run-script', {
-        cmd: 'npm run lint:fix',
-        watch: 'watch "$1" src'
-      }
-    ]
+    '@snowpack/plugin-react-refresh'
+    // [
+    //   '@snowpack/plugin-run-script', {
+    //     cmd: 'npm run lint:fix',
+    //     watch: 'watch "$1" src'
+    //   }
+    // ]
   ],
   install: [
   ],
