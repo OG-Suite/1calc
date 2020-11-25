@@ -113,7 +113,7 @@ class Default extends React.Component {
 
     return (
       <>
-        <h1>CaculAppTor</h1>
+        <h1>CalculAppTor</h1>
         <div style={spanStyle}>
           {this.state.currentNumber}
         </div>

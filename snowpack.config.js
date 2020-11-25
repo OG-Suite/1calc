@@ -7,13 +7,22 @@ module.exports = {
   },
   exclude: ['**/node_modules/**'],
   plugins: [
-    '@snowpack/plugin-react-refresh'
-    // [
-    //   '@snowpack/plugin-run-script', {
-    //     cmd: 'npm run lint:fix',
-    //     watch: 'watch "$1" src'
-    //   }
-    // ]
+    '@snowpack/plugin-react-refresh',
+    [
+      '@snowpack/plugin-run-script',
+      {
+        cmd: 'postcss src/css/styles.css > public/styles/bundle.dist.css',
+        watch: 'watch "$1" src/css',
+        input: ['.css'],
+        output: ['.css']
+      }
+    ],
+    [
+      '@snowpack/plugin-run-script', {
+        cmd: 'npm run lint:fix',
+        watch: 'watch "$1" src'
+      }
+    ]
   ],
   install: [
   ],
