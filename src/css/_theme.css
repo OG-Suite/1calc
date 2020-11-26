@@ -1,12 +1,11 @@
 html {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
-  color: red;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 * {
