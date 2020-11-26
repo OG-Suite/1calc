@@ -27,8 +27,13 @@
     "watch": "^1.0.2"
   },
   "dependencies": {
+    "@material-ui/core": "4.11.1",
+    "@material-ui/styles": "4.11.1",
+    "@material-ui/system": "4.9.14",
+    "@material-ui/utils": "4.10.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.1.0"
   }
 }
