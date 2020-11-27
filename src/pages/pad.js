@@ -1,6 +1,12 @@
-const PadNull = {
-  value: '',
-  onClick: () => {}
+let padNullIndex = -1
+
+const PadNull = () => {
+  padNullIndex--
+  return {
+    value: String(padNullIndex),
+    onClick: () => {},
+    isNull: true
+  }
 }
 
 const PadDot = {
@@ -85,33 +91,52 @@ const PadDivision = {
   onClick: () => {
     console.log('/')
   },
-  className: 'text-color-300'
+  icon: '<RiDivideLine />'
 }
 
 const PadMultiplication = {
   value: '*',
   onClick: () => {
     console.log('*')
-  }
+  },
+  icon: '<BiPlus />'
 }
 
 const PadSubstraction = {
   value: '-',
   onClick: () => {
     console.log('-')
-  }
+  },
+  icon: '<BiMinus />'
 }
 
 const PadAddition = {
   value: '+',
   onClick: () => {
     console.log('+')
-  }
+  },
+  icon: '<BiPlus />'
+}
+
+const PadDelete = {
+  value: 'del',
+  onClick: () => {
+    console.log('+')
+  },
+  icon: '<FiDelete />'
+}
+
+const PadEqual = {
+  value: '=',
+  onClick: () => {
+    console.log('+')
+  },
+  icon: '<TiEquals />'
 }
 
 export const defaultPad = [
-  [Pad7, Pad8, Pad9, PadDivision],
-  [Pad4, Pad5, Pad6, PadMultiplication],
-  [Pad1, Pad2, Pad3, PadSubstraction],
-  [Pad0, PadDot, PadNull, PadAddition]
+  [Pad7, Pad8, Pad9, PadDivision, PadDelete],
+  [Pad4, Pad5, Pad6, PadMultiplication, PadNull()],
+  [Pad1, Pad2, Pad3, PadSubstraction, PadNull()],
+  [Pad0, PadDot, PadNull(), PadAddition, PadEqual]
 ]
