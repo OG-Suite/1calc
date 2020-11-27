@@ -5,6 +5,10 @@ import { defaultFunction } from './Fonction'
 import './homeStyle.css'
 
 class Home extends React.Component {
+  showFunctionBar () {
+    console.log('work')
+  }
+
   render () {
     const whiteText = {
       color: 'white'
@@ -42,6 +46,7 @@ class Home extends React.Component {
             Ca fait 34<br />
         </div>
         <div className='fonction-section'>
+          <div className='fonction-section-show' onClick={this.showFunctionBar.bind(this)}> </div>
           { fonctionTouch }
         </div>
         <div className='pad-section'>
