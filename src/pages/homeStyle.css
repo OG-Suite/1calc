@@ -11,6 +11,19 @@
   }
 
 /*      Function Section      */
+.fonction-section-show {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    height: 12px;
+    width: 15px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
 .fonction-section {
     display: flex;
     height: 25vh;
@@ -25,11 +38,22 @@
 .function-row {
     display: flex;
     align-items: center;
+    height: 100%;
     color: white;
 }
 
 .function-row > .function {
     flex: 1;
+}
+
+.function {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+}
+
+.function:hover {
+    background: #1b5bc2;
 }
 
 /*      Pad Section      */
@@ -52,4 +76,14 @@
 
 .pad-row > .pad {
     flex: 1;
+}
+
+.pad {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+}
+
+.pad:hover {
+    background: #393b42;
 }
