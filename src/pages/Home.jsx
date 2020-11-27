@@ -1,30 +1,51 @@
 import React from 'react'
-import { Button, Grid } from '@material-ui/core'
-import { BsArrowBarLeft } from 'react-icons/bs'
-import { BiPlus, BiMinus } from 'react-icons/bi'
-import { FiDelete } from 'react-icons/fi'
-import { TiEquals } from 'react-icons/ti'
-import { RiDivideLine } from 'react-icons/ri'
-import { defaultPad } from './pad'
+import { Button } from '@material-ui/core'
+import { defaultPad } from './Pad'
+import { defaultFunction } from './Fonction'
+import './homeStyle.css'
 
 class Home extends React.Component {
   render () {
-    const mainDiv = {
-      height: '100vh'
+    const whiteText = {
+      color: 'white'
     }
 
-    const resultScreen = {
-      height: '40%',
-      width: '100%',
-      background: '#fefefe',
-      color: 'black',
-      textAlign: 'center'
+    const fonctionTouch = []
+    for (const [key, element] of Object.entries(defaultFunction)) {
+      const row = []
+      for (const func of element) {
+        row.push(<Button key={func.value} className="function" style={whiteText}>{func.value}</Button>)
+      }
+      fonctionTouch.push(<div key={key} className="function-row">{row}</div>)
+    }
+
+    const padTouch = []
+    for (const [key, element] of Object.entries(defaultPad)) {
+      const row = []
+      for (const pad of element) {
+        row.push(<Button key={pad.value} className="pad" style={whiteText} disabled={pad.isNull}>{pad.isNull ? ' ' : pad.value}</Button>)
+      }
+      padTouch.push(<div key={key} className="pad-row">{row}</div>)
     }
 
     return (
-      <div style={mainDiv}>
-        <div style={resultScreen}>
-            coucou
+      <div className='main'>
+        <div className='result-section'>
+            Ca fait 34<br />
+            Ca fait 34<br />
+            Ca fait 34<br />
+            Ca fait 34<br />
+            Ca fait 34<br />
+            Ca fait 34<br />
+            Ca fait 34<br />
+            Ca fait 34<br />
+            Ca fait 34<br />
+        </div>
+        <div className='fonction-section'>
+          { fonctionTouch }
+        </div>
+        <div className='pad-section'>
+          { padTouch }
         </div>
       </div>
     )
