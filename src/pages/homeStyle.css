@@ -1,0 +1,55 @@
+.main {
+    display: flex;
+    color: white;
+    flex-flow: column nowrap;
+}
+
+.result-section {
+    background: #2c3033;
+    height: 25vh;
+    color: white;
+  }
+
+/*      Function Section      */
+.fonction-section {
+    display: flex;
+    height: 25vh;
+    background: #174fa6;
+    flex-flow: column nowrap;
+}
+
+.function-section > .function-row {
+    flex: 1;
+}
+
+.function-row {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.function-row > .function {
+    flex: 1;
+}
+
+/*      Pad Section      */
+.pad-section {
+    display: flex;
+    height: 50vh;
+    background: #202125;
+    flex-flow: column nowrap;
+}
+
+.pad-section > .pad-row {
+    flex: 1;
+}
+
+.pad-row {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.pad-row > .pad {
+    flex: 1;
+}
