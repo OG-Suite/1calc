@@ -95,7 +95,7 @@ const PadDivision = {
 }
 
 const PadMultiplication = {
-  value: '*',
+  value: 'x',
   onClick: () => {
     console.log('*')
   },
