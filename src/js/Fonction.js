@@ -1,106 +1,123 @@
+const styleFonction = 'flex-1 hover:bg-blue-200 dark:hover:bg-blue-700 h-full'
+
 const FuncINV = {
-  value: 'inv',
+  value: 'INV',
   onClick: () => {
     console.log('inv')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const FuncDEG = {
-  value: 'deg',
+  value: 'DEG',
   onClick: () => {
     console.log('deg')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const FuncSIN = {
-  value: 'sin',
+  value: 'SIN',
   onClick: () => {
     console.log('sin')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const FuncCOS = {
-  value: 'cos',
+  value: 'COS',
   onClick: () => {
     console.log('cos')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const FuncTAN = {
-  value: 'tan',
+  value: 'TAN',
   onClick: () => {
     console.log('tan')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const FuncMOD = {
   value: '%',
   onClick: () => {
     console.log('modulo')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const FuncLN = {
   value: 'ln',
   onClick: () => {
     console.log('ln')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const FuncLOG = {
   value: 'log',
   onClick: () => {
     console.log('log')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const FuncSQROOT = {
   value: '√',
   onClick: () => {
     console.log('√')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const FuncEXP = {
   value: '^',
   onClick: () => {
     console.log('^')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const FuncPI = {
   value: 'π',
   onClick: () => {
     console.log('π')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const FuncE = {
   value: 'e',
   onClick: () => {
     console.log('e')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const LeftParenthese = {
   value: '(',
   onClick: () => {
     console.log('(')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const RightParenthese = {
   value: ')',
   onClick: () => {
     console.log(')')
-  }
+  },
+  styleButton: styleFonction
 }
 
 const FuncOPOSITE = {
   value: '!',
   onClick: () => {
     console.log('!')
-  }
+  },
+  styleButton: styleFonction
 }
 
 export const defaultFunction = [
