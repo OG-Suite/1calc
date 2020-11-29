@@ -7,6 +7,7 @@ module.exports = {
   },
   exclude: ['**/node_modules/**'],
   plugins: [
+    '@snowpack/plugin-typescript',
     '@snowpack/plugin-react-refresh',
     [
       '@snowpack/plugin-run-script',

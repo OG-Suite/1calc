@@ -6,6 +6,19 @@ module.exports = {
   },
   extends: ['standard', 'plugin:react/recommended'],
   parserOptions: {
-    ecmaVersion: 2020
-  }
+    ecmaVersion: 2020,
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
+  overrides: [
+    {
+      files: ['*.tsx', '*.ts'],
+      extends: ['plugin:@typescript-eslint/recommended', 'standard-with-typescript'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: './tsconfig.json'
+      }
+    }
+  ]
 }
