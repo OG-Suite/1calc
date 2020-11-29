@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { FiMoon, FiSun } from 'react-icons/fi'
 
-export const DarkButton = () => {
+export const DarkModeButton = () => {
   const [themeDark, setThemeDark] = useState(false)
 
   function darkMode () {
@@ -17,6 +17,6 @@ export const DarkButton = () => {
     }
   }
   return (
-    <div className="absolute right-2 top-2 cursor-pointer" onClick={darkMode}>{themeDark ? <FiMoon /> : <FiSun />}</div>
+    <div className="absolute right-2 top-2 cursor-pointer z-10" onClick={darkMode}>{themeDark ? <FiMoon /> : <FiSun />}</div>
   )
 }
