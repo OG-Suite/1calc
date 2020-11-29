@@ -38,6 +38,7 @@ export const Keyboard = (props) => {
 
   return (
     <>
+      {/* Hide FunctionPanel default */}
       <div className='flex-1 flex flex-col flex-nowrap bg-blue-300 dark:bg-blue-800 hidden' id='function-touch'>
         {fonctionTouch}
       </div>
