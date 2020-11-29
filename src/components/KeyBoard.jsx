@@ -1,19 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 import { Button } from './Button'
 
 import { defaultPad } from '../js/Pad'
-import { defaultFunction } from '../js/Fonction'
+import { defaultFunction, invFunction } from '../js/Fonction'
 
 export const Keyboard = (props) => {
   const fonctionTouch = []
-  for (const [key, element] of Object.entries(defaultFunction)) {
-    const row = []
-    for (const func of element) {
-      row.push(<Button key={func.value} className={func.styleButton} value={func.value} function={func.onClick}/>)
+  const [invOrNot, setInvOrNot] = useState(false)
+  if (invOrNot) {
+    for (const [key, element] of Object.entries(defaultFunction)) {
+      const row = []
+      for (const func of element) {
+        row.push(<Button key={func.value} className={func.styleButton} value={func.value} function={func.isINV ? () => setInvOrNot(!invOrNot) : func.onClick}/>)
+      }
+      fonctionTouch.push(<div key={key} className="flex flex-1 items-center">{row}</div>)
     }
-    fonctionTouch.push(<div key={key} className="flex flex-1 items-center">{row}</div>)
+  } else {
+    for (const [key, element] of Object.entries(invFunction)) {
+      const row = []
+      for (const func of element) {
+        row.push(<Button key={func.value} className={func.styleButton} value={func.value} function={func.isINV ? () => setInvOrNot(!invOrNot) : func.onClick}/>)
+      }
+      fonctionTouch.push(<div key={key} className="flex flex-1 items-center">{row}</div>)
+    }
   }
 
   const padTouch = []
@@ -27,7 +38,7 @@ export const Keyboard = (props) => {
 
   return (
     <>
-      <div className='flex-1 flex flex-col flex-nowrap bg-blue-300 dark:bg-blue-800'>
+      <div className='flex-1 flex flex-col flex-nowrap bg-blue-300 dark:bg-blue-800' id='function-touch'>
         {fonctionTouch}
       </div>
       <div className='flex-1 flex flex-col flex-nowrap bg-gray-300 dark:bg-gray-800'>
