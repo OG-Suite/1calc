@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { KeyBoard } from '../components/KeyBoard'
+import { Keyboard } from '../components/Keyboard'
 import { DarkButton } from '../components/DarkButton'
 import { Screen } from '../components/Screen'
 
@@ -14,7 +14,7 @@ class Home extends React.Component {
         <DarkButton />
         <div className='flex-1 flex flex-col flex-nowrap'>
           <Screen />
-          <KeyBoard />
+          <Keyboard />
         </div>
       </div>
     )

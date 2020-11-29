@@ -6,7 +6,7 @@ import { Button } from './Button'
 import { defaultPad } from '../js/Pad'
 import { defaultFunction } from '../js/Fonction'
 
-export const KeyBoard = (props) => {
+export const Keyboard = (props) => {
   const fonctionTouch = []
   for (const [key, element] of Object.entries(defaultFunction)) {
     const row = []
@@ -37,7 +37,7 @@ export const KeyBoard = (props) => {
   )
 }
 
-KeyBoard.propTypes = {
+Keyboard.propTypes = {
   fonction: PropTypes.bool,
   pad: PropTypes.bool
 }
