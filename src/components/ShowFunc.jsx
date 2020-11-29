@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-import { RiFunctionLine } from 'react-icons/ri'
+import { BsArrowBarUp, BsArrowBarDown } from 'react-icons/bs'
 
 export const ShowFunc = () => {
-  const [Negrel, setNegrel] = useState(false)
+  const [Negrel, setNegrel] = useState(true)
   function showFunction () {
     if (Negrel) {
       document.querySelector('#function-touch').classList.remove('hidden')
@@ -16,6 +16,6 @@ export const ShowFunc = () => {
     }
   }
   return (
-    <div className="absolute left-2 top-2 cursor-pointer" onClick={showFunction}><RiFunctionLine /></div>
+    <div className="absolute left-2 top-2 cursor-pointer" onClick={showFunction}><strong>{Negrel ? <BsArrowBarUp /> : <BsArrowBarDown />}</strong></div>
   )
 }

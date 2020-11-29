@@ -38,7 +38,7 @@ export const Keyboard = (props) => {
 
   return (
     <>
-      <div className='flex-1 flex flex-col flex-nowrap bg-blue-300 dark:bg-blue-800' id='function-touch'>
+      <div className='flex-1 flex flex-col flex-nowrap bg-blue-300 dark:bg-blue-800 hidden' id='function-touch'>
         {fonctionTouch}
       </div>
       <div className='flex-1 flex flex-col flex-nowrap bg-gray-300 dark:bg-gray-800'>

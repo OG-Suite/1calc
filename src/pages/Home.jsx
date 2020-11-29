@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { Keyboard } from '../components/Keyboard'
-import { ShowFunc } from '../components/ShowFunc'
 import { DarkButton } from '../components/DarkButton'
 import { Screen } from '../components/Screen'
 
@@ -12,7 +11,6 @@ class Home extends React.Component {
 
     return (
       <div className='flex flex-col flex-no-wrap text-gray-800 dark:text-gray-200 h-screen bg-gray-100'>
-        <ShowFunc />
         <DarkButton />
         <div className='flex-1 flex flex-col flex-nowrap'>
           <Screen />
