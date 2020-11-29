@@ -5,6 +5,7 @@ const FuncINV = {
   onClick: () => {
     console.log('inv')
   },
+  isINV: true,
   styleButton: styleFonction
 }
 
@@ -24,6 +25,14 @@ const FuncSIN = {
   styleButton: styleFonction
 }
 
+const FuncARCSIN = {
+  value: 'arcSIN',
+  onClick: () => {
+    console.log('arcsin')
+  },
+  styleButton: styleFonction
+}
+
 const FuncCOS = {
   value: 'COS',
   onClick: () => {
@@ -32,10 +41,26 @@ const FuncCOS = {
   styleButton: styleFonction
 }
 
+const FuncARCCOS = {
+  value: 'arcCOS',
+  onClick: () => {
+    console.log('arccos')
+  },
+  styleButton: styleFonction
+}
+
 const FuncTAN = {
   value: 'TAN',
   onClick: () => {
     console.log('tan')
+  },
+  styleButton: styleFonction
+}
+
+const FuncARCTAN = {
+  value: 'arcTAN',
+  onClick: () => {
+    console.log('arctan')
   },
   styleButton: styleFonction
 }
@@ -112,7 +137,7 @@ const RightParenthese = {
   styleButton: styleFonction
 }
 
-const FuncOPOSITE = {
+const FuncOPPOSITE = {
   value: '!',
   onClick: () => {
     console.log('!')
@@ -120,8 +145,38 @@ const FuncOPOSITE = {
   styleButton: styleFonction
 }
 
+const FuncEX = {
+  value: 'e^x',
+  onClick: () => {
+    console.log('e^x')
+  },
+  styleButton: styleFonction
+}
+
+const FuncTENX = {
+  value: '10^',
+  onClick: () => {
+    console.log('10^')
+  },
+  styleButton: styleFonction
+}
+
+const FuncXSQUARE = {
+  value: 'x^2',
+  onClick: () => {
+    console.log('x^2')
+  },
+  styleButton: styleFonction
+}
+
 export const defaultFunction = [
   [FuncINV, FuncDEG, FuncSIN, FuncCOS, FuncTAN],
   [FuncMOD, FuncLN, FuncLOG, FuncSQROOT, FuncEXP],
-  [FuncPI, FuncE, LeftParenthese, RightParenthese, FuncOPOSITE]
+  [FuncPI, FuncE, LeftParenthese, RightParenthese, FuncOPPOSITE]
+]
+
+export const invFunction = [
+  [FuncINV, FuncDEG, FuncARCSIN, FuncARCCOS, FuncARCTAN],
+  [FuncMOD, FuncEX, FuncTENX, FuncXSQUARE, FuncEXP],
+  [FuncPI, FuncE, LeftParenthese, RightParenthese, FuncOPPOSITE]
 ]
