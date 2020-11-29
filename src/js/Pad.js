@@ -1,6 +1,6 @@
-const styleNumber = 'flex-1 h-full hover:bg-gray-200 dark:hover:bg-gray-700'
+const styleNumber = 'flex-1 h-full hover:bg-gray-200 dark:hover:bg-gray-600'
 const stylePadNull = 'flex-1 h-full cursor-default'
-const styleSign = 'flex-1 h-full hover:bg-gray-200 dark:hover:bg-gray-700 text-blue-800 dark:text-blue-300'
+const styleSign = 'flex-1 h-full hover:bg-gray-200 dark:hover:bg-gray-600 text-blue-800 dark:text-blue-300'
 
 let padNullIndex = -1
 
@@ -105,7 +105,7 @@ const Pad9 = {
 const PadDivision = {
   value: '÷',
   onClick: () => {
-    console.log('/')
+    console.log('÷')
   },
   icon: '<RiDivideLine />',
   styleButton: styleSign
@@ -141,7 +141,7 @@ const PadAddition = {
 const PadDelete = {
   value: '<-',
   onClick: () => {
-    console.log('+')
+    console.log('<-')
   },
   icon: '<FiDelete />',
   styleButton: styleSign
@@ -150,7 +150,7 @@ const PadDelete = {
 const PadEqual = {
   value: '=',
   onClick: () => {
-    console.log('+')
+    console.log('=')
   },
   icon: '<TiEquals />',
   styleButton: styleSign
