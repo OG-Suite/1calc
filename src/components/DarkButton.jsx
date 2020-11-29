@@ -8,9 +8,11 @@ export const DarkButton = () => {
   function darkMode () {
     if (document.querySelector('html').classList.contains('dark')) {
       document.querySelector('html').classList.remove('dark')
+      console.log('Light Mode')
       setThemeDark(false)
     } else {
       document.querySelector('html').classList.add('dark')
+      console.log('Dark Mode')
       setThemeDark(true)
     }
   }
