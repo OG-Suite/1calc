@@ -3,6 +3,7 @@ import React from 'react'
 import { Keyboard } from '../components/Keyboard'
 import { DarkModeButton } from '../components/DarkModeButton'
 import { Screen } from '../components/Screen'
+import { ShowFunc } from '../components/ShowFunc'
 
 class Home extends React.Component {
   render () {
@@ -14,6 +15,7 @@ class Home extends React.Component {
         <DarkModeButton />
         <div className='flex-1 flex flex-col flex-nowrap'>
           <Screen />
+          <ShowFunc />
           <Keyboard />
         </div>
       </div>

@@ -16,6 +16,8 @@ export const ShowFunc = () => {
     }
   }
   return (
-    <div className="absolute left-2 top-2 cursor-pointer" onClick={showFunction}><strong>{Negrel ? <BsArrowBarUp /> : <BsArrowBarDown />}</strong></div>
+    <div className>
+      <div className="cursor-pointer" onClick={showFunction}><strong>{Negrel ? <BsArrowBarUp /> : <BsArrowBarDown />}</strong></div>
+    </div>
   )
 }
