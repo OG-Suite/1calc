@@ -5,14 +5,16 @@ module.exports = {
     public: '/',
     src: '/'
   },
-  exclude: ['**/node_modules/**'],
+  exclude: [
+    path.join('**', 'node_modules', '**')
+  ],
   plugins: [
     '@snowpack/plugin-typescript',
     '@snowpack/plugin-react-refresh',
     [
       '@snowpack/plugin-run-script',
       {
-        cmd: 'postcss src/css/styles.css > public/styles/bundle.dist.css',
+        cmd: `postcss ${path.join('src', 'css', 'styles.css')} > ${path.join('public', 'styles', 'bundle.dist.css')}`,
         watch: 'watch "$1" src/css',
         input: ['.css'],
         output: ['.css']
