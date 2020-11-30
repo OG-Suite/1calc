@@ -1,172 +1,193 @@
-const styleFonction = 'flex-1 hover:bg-blue-200 dark:hover:bg-blue-700 h-full'
+const styleFonction = 'flex-1 hover:bg-blue-200 dark:hover:bg-blue-700 h-full focus:outline-none'
 
 const FuncINV = {
-  value: 'INV',
+  key: 'INV',
   onClick: () => {
     console.log('inv')
   },
   isINV: true,
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'INV'
 }
 
 const FuncDEG = {
-  value: 'DEG',
+  key: 'DEG',
   onClick: () => {
     console.log('deg')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'DEG'
 }
 
 const FuncSIN = {
-  value: 'SIN',
+  key: 'SIN',
   onClick: () => {
     console.log('sin')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'SIN'
 }
 
 const FuncARCSIN = {
-  value: 'arcSIN',
+  key: 'arcSIN',
   onClick: () => {
     console.log('arcsin')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'arcSIN'
 }
 
 const FuncCOS = {
-  value: 'COS',
+  key: 'COS',
   onClick: () => {
     console.log('cos')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'COS'
 }
 
 const FuncARCCOS = {
-  value: 'arcCOS',
+  key: 'arcCOS',
   onClick: () => {
     console.log('arccos')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'arcCOS'
 }
 
 const FuncTAN = {
-  value: 'TAN',
+  key: 'TAN',
   onClick: () => {
     console.log('tan')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'TAN'
 }
 
 const FuncARCTAN = {
-  value: 'arcTAN',
+  key: 'arcTAN',
   onClick: () => {
     console.log('arctan')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'arcTAN'
 }
 
 const FuncMOD = {
-  value: '%',
+  key: '%',
   onClick: () => {
     console.log('modulo')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: '%'
 }
 
 const FuncLN = {
-  value: 'ln',
+  key: 'ln',
   onClick: () => {
     console.log('ln')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'ln'
 }
 
 const FuncLOG = {
-  value: 'log',
+  key: 'log',
   onClick: () => {
     console.log('log')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'log'
 }
 
 const FuncSQROOT = {
-  value: '√',
+  key: '√',
   onClick: () => {
     console.log('√')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: '√'
 }
 
 const FuncEXP = {
-  value: '^',
+  key: '^',
   onClick: () => {
     console.log('^')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: '^'
 }
 
 const FuncPI = {
-  value: 'π',
+  key: 'π',
   onClick: () => {
     console.log('π')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'π'
 }
 
 const FuncE = {
-  value: 'e',
+  key: 'e',
   onClick: () => {
     console.log('e')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'e'
 }
 
 const LeftParenthese = {
-  value: '(',
+  key: '(',
   onClick: () => {
     console.log('(')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: '('
 }
 
 const RightParenthese = {
-  value: ')',
+  key: ')',
   onClick: () => {
     console.log(')')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: ')'
 }
 
 const FuncOPPOSITE = {
-  value: '!',
+  key: '!',
   onClick: () => {
     console.log('!')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: '!'
 }
 
 const FuncEX = {
-  value: 'e^x',
+  key: 'e^x',
   onClick: () => {
     console.log('e^x')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'e^x'
 }
 
 const FuncTENX = {
-  value: '10^',
+  key: '10^',
   onClick: () => {
     console.log('10^')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: '10^'
 }
 
 const FuncXSQUARE = {
-  value: 'x^2',
+  key: 'x^2',
   onClick: () => {
     console.log('x^2')
   },
-  styleButton: styleFonction
+  style: styleFonction,
+  icon: 'x^2'
 }
 
 export const defaultFunction = [

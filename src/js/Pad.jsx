@@ -1,159 +1,175 @@
-const styleNumber = 'flex-1 h-full hover:bg-gray-200 dark:hover:bg-gray-600'
+import { RiDeleteBack2Fill } from 'react-icons/ri'
+import { FaEquals, FaDivide, FaMinus, FaPlus } from 'react-icons/fa'
+import React from 'react'
+
+const styleNumber = 'flex-1 h-full hover:bg-gray-200 dark:hover:bg-gray-600 focus:outline-none font-bold'
 const stylePadNull = 'flex-1 h-full cursor-default'
-const styleSign = 'flex-1 h-full hover:bg-gray-200 dark:hover:bg-gray-600 text-blue-800 dark:text-blue-300'
+const styleOperator = 'flex-1 h-full hover:bg-gray-200 dark:hover:bg-gray-600 text-blue-800 dark:text-blue-300 focus:outline-none'
 
 let padNullIndex = -1
 
 const PadNull = () => {
   padNullIndex--
   return {
-    value: String(padNullIndex),
+    key: String(padNullIndex),
     onClick: () => {},
     isNull: true,
-    styleButton: stylePadNull
+    style: stylePadNull,
+    icon: String(padNullIndex)
   }
 }
 
 const PadDot = {
-  value: '.',
+  key: '.',
   onClick: () => {
     console.log('.')
   },
-  styleButton: styleNumber
+  style: styleNumber,
+  icon: '.'
 }
 
 const Pad0 = {
-  value: '0',
+  key: '0',
   onClick: () => {
     console.log('0')
   },
-  styleButton: styleNumber
+  style: styleNumber,
+  icon: '0'
 }
 
 const Pad1 = {
-  value: '1',
+  key: '1',
   onClick: () => {
     console.log('1')
   },
-  styleButton: styleNumber
+  style: styleNumber,
+  icon: '1'
 }
 
 const Pad2 = {
-  value: '2',
+  key: '2',
   onClick: () => {
     console.log('2')
   },
-  styleButton: styleNumber
+  style: styleNumber,
+  icon: '2'
 }
 
 const Pad3 = {
-  value: '3',
+  key: '3',
   onClick: () => {
     console.log('3')
   },
-  styleButton: styleNumber
+  style: styleNumber,
+  icon: '3'
 }
 
 const Pad4 = {
-  value: '4',
+  key: '4',
   onClick: () => {
     console.log('4')
   },
-  styleButton: styleNumber
+  style: styleNumber,
+  icon: '4'
 }
 
 const Pad5 = {
-  value: '5',
+  key: '5',
   onClick: () => {
     console.log('5')
   },
-  styleButton: styleNumber
+  style: styleNumber,
+  icon: '5'
 }
 
 const Pad6 = {
-  value: '6',
+  key: '6',
   onClick: () => {
     console.log('6')
   },
-  styleButton: styleNumber
+  style: styleNumber,
+  icon: '6'
 }
 
 const Pad7 = {
-  value: '7',
+  key: '7',
   onClick: () => {
     console.log('7')
   },
-  styleButton: styleNumber
+  style: styleNumber,
+  icon: '7'
 }
 
 const Pad8 = {
-  value: '8',
+  key: '8',
   onClick: () => {
     console.log('8')
   },
-  styleButton: styleNumber
+  style: styleNumber,
+  icon: '8'
 }
 
 const Pad9 = {
-  value: '9',
+  key: '9',
   onClick: () => {
     console.log('9')
   },
-  styleButton: styleNumber
+  style: styleNumber,
+  icon: '9'
 }
 
 const PadDivision = {
-  value: '÷',
+  key: '÷',
   onClick: () => {
     console.log('÷')
   },
-  icon: '<RiDivideLine />',
-  styleButton: styleSign
+  icon: <FaDivide className="mx-auto"/>,
+  style: styleOperator
 }
 
 const PadMultiplication = {
-  value: '×',
+  key: '×',
   onClick: () => {
     console.log('*')
   },
-  icon: '<BiPlus />',
-  styleButton: styleSign
+  icon: <span className="font-bold">×</span>,
+  style: styleOperator
 }
 
 const PadSubstraction = {
-  value: '-',
+  key: '-',
   onClick: () => {
     console.log('-')
   },
-  icon: '<BiMinus />',
-  styleButton: styleSign
+  icon: <FaMinus className="mx-auto"/>,
+  style: styleOperator
 }
 
 const PadAddition = {
-  value: '+',
+  key: '+',
   onClick: () => {
     console.log('+')
   },
-  icon: '<BiPlus />',
-  styleButton: styleSign
+  icon: <FaPlus className="mx-auto"/>,
+  style: styleOperator
 }
 
 const PadDelete = {
-  value: '<-',
+  key: '<-',
   onClick: () => {
     console.log('<-')
   },
-  icon: '<FiDelete />',
-  styleButton: styleSign
+  icon: <RiDeleteBack2Fill className="mx-auto"/>,
+  style: styleOperator
 }
 
 const PadEqual = {
-  value: '=',
+  key: '=',
   onClick: () => {
     console.log('=')
   },
-  icon: '<TiEquals />',
-  styleButton: styleSign
+  icon: <FaEquals className="mx-auto"/>,
+  style: styleOperator
 }
 
 export const defaultPad = [
