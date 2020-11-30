@@ -13,7 +13,7 @@ export const Keyboard = (props) => {
     for (const [key, element] of Object.entries(defaultFunction)) {
       const row = []
       for (const func of element) {
-        row.push(<Button key={func.value} className={func.styleButton} value={func.value} function={func.isINV ? () => setInvOrNot(!invOrNot) : func.onClick}/>)
+        row.push(<Button key={func.key} className={func.styleButton} icon={func.icon} function={func.isINV ? () => setInvOrNot(!invOrNot) : func.onClick}/>)
       }
       fonctionTouch.push(<div key={key} className="flex flex-1 items-center">{row}</div>)
     }
@@ -21,7 +21,7 @@ export const Keyboard = (props) => {
     for (const [key, element] of Object.entries(invFunction)) {
       const row = []
       for (const func of element) {
-        row.push(<Button key={func.value} className={func.styleButton} value={func.value} function={func.isINV ? () => setInvOrNot(!invOrNot) : func.onClick}/>)
+        row.push(<Button key={func.key} className={func.styleButton} icon={func.icon} function={func.isINV ? () => setInvOrNot(!invOrNot) : func.onClick}/>)
       }
       fonctionTouch.push(<div key={key} className="flex flex-1 items-center">{row}</div>)
     }
@@ -31,7 +31,7 @@ export const Keyboard = (props) => {
   for (const [key, element] of Object.entries(defaultPad)) {
     const row = []
     for (const pad of element) {
-      row.push(<Button key={pad.value} className={pad.styleButton} value={pad.value} isDisabled={pad.isNull} function={pad.onClick}/>)
+      row.push(<Button key={pad.key} className={pad.styleButton} icon={pad.icon} isDisabled={pad.isNull} function={pad.onClick}/>)
     }
     padTouch.push(<div key={key} className="flex flex-1 items-center">{row}</div>)
   }
