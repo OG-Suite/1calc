@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { BsArrowBarUp, BsArrowBarDown } from 'react-icons/bs'
+import { CgLoadbar } from 'react-icons/cg'
 
 export const ShowFunc = () => {
   const [Negrel, setNegrel] = useState(true)
@@ -16,8 +16,8 @@ export const ShowFunc = () => {
     }
   }
   return (
-    <div className>
-      <div className="cursor-pointer" onClick={showFunction}><strong>{Negrel ? <BsArrowBarUp /> : <BsArrowBarDown />}</strong></div>
-    </div>
+  <div className="bg-blue-300 dark:bg-blue-800 w-screen inline text-center py-1">
+    {<CgLoadbar onClick={showFunction} className="cursor-pointer  mx-auto"/>}
+  </div>
   )
 }
