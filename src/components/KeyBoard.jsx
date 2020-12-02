@@ -45,17 +45,31 @@ export const Keyboard = (props) => {
     padOperator.push(<div key={key} className="flex flex-1 items-center">{row}</div>)
   }
 
+  const fonctionStyle = {
+    maxHeight: '25vh'
+  }
+  const touchStyle = {
+    minHeight: '50vh'
+  }
+  const numberStyle = {
+    width: '70%'
+  }
+  const operatorStyle = {
+    width: '30%',
+    boxShadow: '#ffffff21 1px 0 inset'
+  }
+
   return (
     <>
       {/* Hide FunctionPanel default */}
-      <div className='flex-1 flex flex-col flex-nowrap bg-blue-300 dark:bg-blue-800 hidden' id='function-touch'>
+      <div className='flex-1 flex flex-col flex-nowrap bg-blue-300 dark:bg-blue-800 hidden' id='function-touch' style={fonctionStyle}>
         {fonctionTouch}
       </div>
-      <div className='flex-1 flex flex-row flex-nowrap bg-gray-300 dark:bg-gray-800'>
-        <div className="flex flex-1 flex-col flex-nowrap">
+      <div className='flex-1 flex flex-row flex-nowrap bg-gray-300 dark:bg-gray-800' style={touchStyle}>
+        <div className="flex flex-col flex-nowrap" style={numberStyle}>
           {padNumber}
         </div>
-        <div className="flex flex-1 flex-col flex-nowrap border-l border-blue-900">
+        <div className="flex flex-col flex-nowrap" style={operatorStyle}>
           {padOperator}
         </div>
       </div>
