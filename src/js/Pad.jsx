@@ -1,4 +1,4 @@
-import { RiDeleteBack2Fill } from 'react-icons/ri'
+import { FiDelete } from 'react-icons/fi'
 import { FaEquals, FaDivide, FaMinus, FaPlus } from 'react-icons/fa'
 import React from 'react'
 
@@ -132,7 +132,7 @@ const PadMultiplication = {
   onClick: () => {
     console.log('*')
   },
-  icon: <span className="font-bold">×</span>,
+  icon: <FaPlus className="mx-auto transform rotate-45"/>,
   style: styleOperator
 }
 
@@ -159,7 +159,7 @@ const PadDelete = {
   onClick: () => {
     console.log('<-')
   },
-  icon: <RiDeleteBack2Fill className="mx-auto"/>,
+  icon: <FiDelete className="mx-auto"/>,
   style: styleOperator
 }
 
