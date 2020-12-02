@@ -16,7 +16,7 @@ export const ShowFunc = () => {
     }
   }
   return (
-  <div className="bg-blue-300 dark:bg-blue-800 w-screen inline text-center py-1">
+  <div className="bg-blue-300 dark:bg-blue-800 w-full inline text-center py-1">
     {<CgLoadbar onClick={showFunction} className="cursor-pointer  mx-auto"/>}
   </div>
   )
