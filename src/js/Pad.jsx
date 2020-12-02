@@ -172,9 +172,16 @@ const PadEqual = {
   style: styleOperator
 }
 
-export const defaultPad = [
-  [Pad7, Pad8, Pad9, PadDivision, PadDelete],
-  [Pad4, Pad5, Pad6, PadMultiplication, PadNull()],
-  [Pad1, Pad2, Pad3, PadSubstraction, PadNull()],
-  [Pad0, PadDot, PadNull(), PadAddition, PadEqual]
+export const numberSide = [
+  [Pad7, Pad8, Pad9],
+  [Pad4, Pad5, Pad6],
+  [Pad1, Pad2, Pad3],
+  [Pad0, PadDot, PadNull()]
+]
+
+export const operatorSide = [
+  [PadDivision, PadDelete],
+  [PadMultiplication, PadNull()],
+  [PadSubstraction, PadNull()],
+  [PadAddition, PadEqual]
 ]
