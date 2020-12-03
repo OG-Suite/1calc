@@ -3,7 +3,7 @@ import { Token, TokenType } from './tokens'
 
 const whitespace = /\s/
 const alphabetic = /[a-zA-Z]/
-const number = /(\d|\.|-)/
+const number = /(\d|\.)/
 const specialChar = /[!@#$%/^&*+=_-]/
 
 export class Lexer {
@@ -25,7 +25,7 @@ export class Lexer {
     this.pos++
   }
 
-  Lex (): Token {
+  lex (): Token {
     while (true) {
       this.readChar()
 
@@ -87,15 +87,15 @@ export class Lexer {
     const result: Token = {
       type: TokenType.IDENT,
       start: this.pos,
-      end: 0,
+      end: this.pos + 1,
       value: this.char
     }
 
     while (alphabetic.test(this.peek)) {
       this.readChar()
       result.value += this.char
+      result.end++
     }
-    result.end = this.pos
 
     return result
   }
