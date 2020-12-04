@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Default from '@/layouts/Default'
+import Home from '@/pages/Home'
 
-ReactDOM.render(<Default />, document.getElementById('root'))
+ReactDOM.render(<Home />, document.getElementById('root'))
 
 // if (import.meta.hot) {
 //   import.meta.hot.accept();

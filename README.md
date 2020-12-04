@@ -2,7 +2,7 @@
 
 # New Project
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+> <div style='center'>✨ Bootstrapped with Create Snowpack App (CSA).</div>
 
 ## Available Scripts
 

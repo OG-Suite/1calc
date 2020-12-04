@@ -4,7 +4,11 @@ module.exports = {
     es6: true,
     node: true
   },
-  extends: ['standard', 'plugin:react/recommended'],
+  extends: [
+    'standard',
+    'eslint:recommended',
+    'plugin:react/recommended'
+  ],
   parserOptions: {
     ecmaVersion: 2020,
     ecmaFeatures: {
