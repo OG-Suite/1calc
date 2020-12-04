@@ -15,6 +15,11 @@ export class Calculator {
   }
 
   compute (calcul: string): number {
+    if (this._history.length !== 0 && calcul.startsWith(this._history[this._history.length - 1].src)) {
+      this._history[this._history.length - 1].src = calcul
+      return this.performCompute(this._history[this._history.length - 1].RPN)
+    }
+
     const c = new Calcul(calcul)
     this._history.push(c)
     c.init()
