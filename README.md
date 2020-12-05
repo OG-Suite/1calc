@@ -1,8 +1,8 @@
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)
 
-# New Project
+# 🦖 Calculaptor
 
-> <div style='center'>✨ Bootstrapped with Create Snowpack App (CSA).</div>
+<div style='center'>✨ Bootstrapped with Create Snowpack App (CSA).</div>
 
 ## Available Scripts
 

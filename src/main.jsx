@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Home from '@/pages/Home'
+import { Default } from '@/layouts/Default'
 
-ReactDOM.render(<Home />, document.getElementById('root'))
+ReactDOM.render(<Default />, document.getElementById('root'))
 
-// if (import.meta.hot) {
-//   import.meta.hot.accept();
-// }
+if (import.meta.hot) {
+  import.meta.hot.accept()
+}
