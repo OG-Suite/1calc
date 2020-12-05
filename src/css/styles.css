@@ -1,2 +1,3 @@
-@import "./_theme.css";
 @import "./_tailwind.css";
+@import "./_position.css";
+@import "./_theme.css";
