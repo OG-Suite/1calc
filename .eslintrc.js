@@ -5,8 +5,8 @@ module.exports = {
     node: true
   },
   extends: [
-    'standard',
     'eslint:recommended',
+    'standard',
     'plugin:react/recommended'
   ],
   parserOptions: {
