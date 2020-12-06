@@ -7,7 +7,7 @@ const FuncINV = {
   },
   isINV: true,
   style: styleFonction,
-  icon: 'INV'
+  slot: 'INV'
 }
 
 const FuncDEG = {
@@ -16,7 +16,7 @@ const FuncDEG = {
     console.log('deg')
   },
   style: styleFonction,
-  icon: 'DEG'
+  slot: 'DEG'
 }
 
 const FuncSIN = {
@@ -25,7 +25,7 @@ const FuncSIN = {
     console.log('sin')
   },
   style: styleFonction,
-  icon: 'SIN'
+  slot: 'SIN'
 }
 
 const FuncARCSIN = {
@@ -34,7 +34,7 @@ const FuncARCSIN = {
     console.log('arcsin')
   },
   style: styleFonction,
-  icon: 'arcSIN'
+  slot: 'arcSIN'
 }
 
 const FuncCOS = {
@@ -43,7 +43,7 @@ const FuncCOS = {
     console.log('cos')
   },
   style: styleFonction,
-  icon: 'COS'
+  slot: 'COS'
 }
 
 const FuncARCCOS = {
@@ -52,7 +52,7 @@ const FuncARCCOS = {
     console.log('arccos')
   },
   style: styleFonction,
-  icon: 'arcCOS'
+  slot: 'arcCOS'
 }
 
 const FuncTAN = {
@@ -61,7 +61,7 @@ const FuncTAN = {
     console.log('tan')
   },
   style: styleFonction,
-  icon: 'TAN'
+  slot: 'TAN'
 }
 
 const FuncARCTAN = {
@@ -70,7 +70,7 @@ const FuncARCTAN = {
     console.log('arctan')
   },
   style: styleFonction,
-  icon: 'arcTAN'
+  slot: 'arcTAN'
 }
 
 const FuncMOD = {
@@ -79,7 +79,7 @@ const FuncMOD = {
     console.log('modulo')
   },
   style: styleFonction,
-  icon: '%'
+  slot: '%'
 }
 
 const FuncLN = {
@@ -88,7 +88,7 @@ const FuncLN = {
     console.log('ln')
   },
   style: styleFonction,
-  icon: 'ln'
+  slot: 'ln'
 }
 
 const FuncLOG = {
@@ -97,7 +97,7 @@ const FuncLOG = {
     console.log('log')
   },
   style: styleFonction,
-  icon: 'log'
+  slot: 'log'
 }
 
 const FuncSQROOT = {
@@ -106,7 +106,7 @@ const FuncSQROOT = {
     console.log('√')
   },
   style: styleFonction,
-  icon: '√'
+  slot: '√'
 }
 
 const FuncEXP = {
@@ -115,7 +115,7 @@ const FuncEXP = {
     console.log('^')
   },
   style: styleFonction,
-  icon: '^'
+  slot: '^'
 }
 
 const FuncPI = {
@@ -124,7 +124,7 @@ const FuncPI = {
     console.log('π')
   },
   style: styleFonction,
-  icon: 'π'
+  slot: 'π'
 }
 
 const FuncE = {
@@ -133,7 +133,7 @@ const FuncE = {
     console.log('e')
   },
   style: styleFonction,
-  icon: 'e'
+  slot: 'e'
 }
 
 const LeftParenthese = {
@@ -142,7 +142,7 @@ const LeftParenthese = {
     console.log('(')
   },
   style: styleFonction,
-  icon: '('
+  slot: '('
 }
 
 const RightParenthese = {
@@ -151,7 +151,7 @@ const RightParenthese = {
     console.log(')')
   },
   style: styleFonction,
-  icon: ')'
+  slot: ')'
 }
 
 const FuncOPPOSITE = {
@@ -160,7 +160,7 @@ const FuncOPPOSITE = {
     console.log('!')
   },
   style: styleFonction,
-  icon: '!'
+  slot: '!'
 }
 
 const FuncEX = {
@@ -169,7 +169,7 @@ const FuncEX = {
     console.log('e^x')
   },
   style: styleFonction,
-  icon: 'e^x'
+  slot: 'e^x'
 }
 
 const FuncTENX = {
@@ -178,7 +178,7 @@ const FuncTENX = {
     console.log('10^')
   },
   style: styleFonction,
-  icon: '10^'
+  slot: '10^'
 }
 
 const FuncXSQUARE = {
@@ -187,16 +187,16 @@ const FuncXSQUARE = {
     console.log('x^2')
   },
   style: styleFonction,
-  icon: 'x^2'
+  slot: 'x^2'
 }
 
-export const defaultFunction = [
+export const FunctionPad = [
   [FuncINV, FuncDEG, FuncSIN, FuncCOS, FuncTAN],
   [FuncMOD, FuncLN, FuncLOG, FuncSQROOT, FuncEXP],
   [FuncPI, FuncE, LeftParenthese, RightParenthese, FuncOPPOSITE]
 ]
 
-export const invFunction = [
+export const invFunctionPad = [
   [FuncINV, FuncDEG, FuncARCSIN, FuncARCCOS, FuncARCTAN],
   [FuncMOD, FuncEX, FuncTENX, FuncXSQUARE, FuncEXP],
   [FuncPI, FuncE, LeftParenthese, RightParenthese, FuncOPPOSITE]
