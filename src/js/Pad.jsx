@@ -2,10 +2,6 @@ import { RiDeleteBack2Fill } from 'react-icons/ri'
 import { FaEquals, FaDivide, FaMinus, FaPlus } from 'react-icons/fa'
 import React from 'react'
 
-const styleNumber = 'flex-1 h-full hover:bg-gray-200 dark:hover:bg-gray-600 focus:outline-none font-bold'
-const stylePadNull = 'flex-1 h-full cursor-default'
-const styleOperator = 'flex-1 h-full hover:bg-gray-200 dark:hover:bg-gray-600 text-blue-800 dark:text-blue-300 focus:outline-none'
-
 let padNullIndex = -1
 
 const PadNull = () => {
@@ -14,8 +10,8 @@ const PadNull = () => {
     key: String(padNullIndex),
     onClick: () => {},
     isNull: true,
-    style: stylePadNull,
-    icon: String(padNullIndex)
+    className: 'flex-1 cursor-default',
+    slot: ''
   }
 }
 
@@ -24,8 +20,7 @@ const PadDot = {
   onClick: () => {
     console.log('.')
   },
-  style: styleNumber,
-  icon: '.'
+  slot: '.'
 }
 
 const Pad0 = {
@@ -33,8 +28,7 @@ const Pad0 = {
   onClick: () => {
     console.log('0')
   },
-  style: styleNumber,
-  icon: '0'
+  slot: '0'
 }
 
 const Pad1 = {
@@ -42,8 +36,7 @@ const Pad1 = {
   onClick: () => {
     console.log('1')
   },
-  style: styleNumber,
-  icon: '1'
+  slot: '1'
 }
 
 const Pad2 = {
@@ -51,8 +44,7 @@ const Pad2 = {
   onClick: () => {
     console.log('2')
   },
-  style: styleNumber,
-  icon: '2'
+  slot: '2'
 }
 
 const Pad3 = {
@@ -60,8 +52,7 @@ const Pad3 = {
   onClick: () => {
     console.log('3')
   },
-  style: styleNumber,
-  icon: '3'
+  slot: '3'
 }
 
 const Pad4 = {
@@ -69,8 +60,7 @@ const Pad4 = {
   onClick: () => {
     console.log('4')
   },
-  style: styleNumber,
-  icon: '4'
+  slot: '4'
 }
 
 const Pad5 = {
@@ -78,8 +68,7 @@ const Pad5 = {
   onClick: () => {
     console.log('5')
   },
-  style: styleNumber,
-  icon: '5'
+  slot: '5'
 }
 
 const Pad6 = {
@@ -87,8 +76,7 @@ const Pad6 = {
   onClick: () => {
     console.log('6')
   },
-  style: styleNumber,
-  icon: '6'
+  slot: '6'
 }
 
 const Pad7 = {
@@ -96,8 +84,7 @@ const Pad7 = {
   onClick: () => {
     console.log('7')
   },
-  style: styleNumber,
-  icon: '7'
+  slot: '7'
 }
 
 const Pad8 = {
@@ -105,8 +92,7 @@ const Pad8 = {
   onClick: () => {
     console.log('8')
   },
-  style: styleNumber,
-  icon: '8'
+  slot: '8'
 }
 
 const Pad9 = {
@@ -114,8 +100,7 @@ const Pad9 = {
   onClick: () => {
     console.log('9')
   },
-  style: styleNumber,
-  icon: '9'
+  slot: '9'
 }
 
 const PadDivision = {
@@ -123,8 +108,7 @@ const PadDivision = {
   onClick: () => {
     console.log('÷')
   },
-  icon: <FaDivide className="mx-auto"/>,
-  style: styleOperator
+  slot: <FaDivide className="mx-auto"/>
 }
 
 const PadMultiplication = {
@@ -132,8 +116,7 @@ const PadMultiplication = {
   onClick: () => {
     console.log('*')
   },
-  icon: <span className="font-bold">×</span>,
-  style: styleOperator
+  slot: <FaPlus className="mx-auto transform rotate-45"/>
 }
 
 const PadSubstraction = {
@@ -141,8 +124,7 @@ const PadSubstraction = {
   onClick: () => {
     console.log('-')
   },
-  icon: <FaMinus className="mx-auto"/>,
-  style: styleOperator
+  slot: <FaMinus className="mx-auto"/>
 }
 
 const PadAddition = {
@@ -150,8 +132,7 @@ const PadAddition = {
   onClick: () => {
     console.log('+')
   },
-  icon: <FaPlus className="mx-auto"/>,
-  style: styleOperator
+  slot: <FaPlus className="mx-auto"/>
 }
 
 const PadDelete = {
@@ -159,8 +140,7 @@ const PadDelete = {
   onClick: () => {
     console.log('<-')
   },
-  icon: <RiDeleteBack2Fill className="mx-auto"/>,
-  style: styleOperator
+  slot: <RiDeleteBack2Fill className="mx-auto"/>
 }
 
 const PadEqual = {
@@ -168,18 +148,17 @@ const PadEqual = {
   onClick: () => {
     console.log('=')
   },
-  icon: <FaEquals className="mx-auto"/>,
-  style: styleOperator
+  slot: <FaEquals className="mx-auto"/>
 }
 
-export const numberSide = [
+export const NumberPad = [
   [Pad7, Pad8, Pad9],
   [Pad4, Pad5, Pad6],
   [Pad1, Pad2, Pad3],
   [Pad0, PadDot, PadNull()]
 ]
 
-export const operatorSide = [
+export const OperatorPad = [
   [PadDivision, PadDelete],
   [PadMultiplication, PadNull()],
   [PadSubstraction, PadNull()],
