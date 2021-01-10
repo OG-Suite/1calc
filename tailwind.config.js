@@ -14,6 +14,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        roboto: ['Roboto', 'Helvetica', 'Arial', 'sans-serif']
+      },
       flex,
       height,
       boxShadow: {
